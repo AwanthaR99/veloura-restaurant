@@ -2,29 +2,27 @@ import React, { useState, useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { FaFire, FaTint, FaFeatherAlt, FaLeaf } from 'react-icons/fa';
 
-// --- Food Image Imports ---
-
-import PhoenixChickenImg from '../assets/images/menu/phoenix-chicken.jpg';
-import LambImg from '../assets/images/menu/lamb.jpg';
-import ScallopsImg from '../assets/images/menu/scallops.jpg';
-import TunaImg from '../assets/images/menu/tuna.jpg';
-import TroutImg from '../assets/images/menu/trout-dish.jpg';
-import GardenImg from '../assets/images/menu/garden-salad.png';
-import RavioliImg from '../assets/images/menu/ravioli.jpg';
-import SoupImg from '../assets/images/menu/soup.jpg';
-import StewImg from '../assets/images/menu/stew.png';
-import GnocchiImg from '../assets/images/menu/gnocchi.jpg';
-import TartImg from '../assets/images/menu/tart.jpg';
-
-// --- NEW: Drink Image Imports ---
-import VeritaserumImg from '../assets/images/menu/veritaserum.png';
-import FelixFelicisImg from '../assets/images/menu/felix-felicis.png';
-import AmortentiaImg from '../assets/images/menu/amortentia.png';
-
+// --- CORRECTED IMAGE IMPORTS WITH ABSOLUTE PATHS ---
+import DragonSteakImg from '@/assets/images/menu/dragon-steak.jpg';
+import PhoenixChickenImg from '@/assets/images/menu/phoenix-chicken.jpg';
+import LambImg from '@/assets/images/menu/lamb.jpg';
+import ScallopsImg from '@/assets/images/menu/scallops.jpg';
+import TunaImg from '@/assets/images/menu/tuna.jpg';
+import TroutImg from '@/assets/images/menu/trout-dish.jpg';
+import GardenImg from '@/assets/images/menu/garden-salad.png';
+import RavioliImg from '@/assets/images/menu/ravioli.jpg';
+import SoupImg from '@/assets/images/menu/soup.jpg';
+import StewImg from '@/assets/images/menu/stew.png';
+import GnocchiImg from '@/assets/images/menu/gnocchi.jpg';
+import TartImg from '@/assets/images/menu/tart.jpg';
+import VeritaserumImg from '@/assets/images/menu/veritaserum.png';
+import FelixFelicisImg from '@/assets/images/menu/felix-felicis.png';
+import AmortentiaImg from '@/assets/images/menu/amortentia.png';
+import BeefDishImg from '@/assets/images/menu/beef-dish.jpg';
 
 const menuData = {
   hearth: [
-   
+    { img: BeefDishImg, name: "Dragon's Breath Steak", price: "Rs. 4500", description: "Flame-grilled to perfection with a fiery peppercorn reduction." },
     { img: PhoenixChickenImg, name: "Phoenix's Ascent", price: "Rs. 3200", description: "Spicy, char-grilled chicken on a bed of saffron risotto." },
     { img: LambImg, name: "Ember-Roasted Lamb", price: "Rs. 4200", description: "Infused with rosemary and garlic, with a mint and pomegranate glaze." }
   ],
@@ -45,14 +43,6 @@ const menuData = {
   ]
 };
 
-const categoryDetails = {
-  hearth: { title: 'The Hearth', icon: FaFire },
-  elixir: { title: 'The Elixir', icon: FaTint },
-  artisan: { title: 'The Artisan\'s Plate', icon: FaFeatherAlt },
-  garden: { title: 'The Garden Table', icon: FaLeaf }
-};
-
-// ++ NEW DATA FOR DRINKS AND WINES ++
 const drinksData = [
   { img: VeritaserumImg, name: "Veritaserum", price: "Rs. 950", description: "A crystal-clear drink with elderflower, cucumber, and mint that promises only truth in its refreshing taste." },
   { img: FelixFelicisImg, name: "Felix Felicis", price: "Rs. 1100", description: "A shimmering, golden concoction of passionfruit and ginger ale for when you need a touch of liquid luck." },
@@ -65,6 +55,12 @@ const winesData = [
     { name: "Brut Champagne", type: "Sparkling", description: "A premier French Champagne for celebrating those truly magical moments." }
 ];
 
+const categoryDetails = {
+  hearth: { title: 'The Hearth', icon: FaFire },
+  elixir: { title: 'The Elixir', icon: FaTint },
+  artisan: { title: 'The Artisan\'s Plate', icon: FaFeatherAlt },
+  garden: { title: 'The Garden Table', icon: FaLeaf }
+};
 
 function Menu() {
   const [activeCategory, setActiveCategory] = useState('hearth');
@@ -117,7 +113,6 @@ function Menu() {
           </div>
         </div>
 
-        {/* ++ NEW SECTION FOR DRINKS ++ */}
         <div className="text-left max-w-4xl mx-auto mt-24">
             <h2 className="text-4xl font-serif text-yellow-400 mb-8 border-b-2 border-yellow-400/20 pb-4">Potions & Elixirs</h2>
             <div className="space-y-12">
@@ -137,7 +132,6 @@ function Menu() {
             </div>
         </div>
         
-        {/* ++ NEW SECTION FOR WINES ++ */}
         <div className="text-left max-w-4xl mx-auto mt-24">
             <h2 className="text-4xl font-serif text-yellow-400 mb-8 border-b-2 border-yellow-400/20 pb-4">From the Sommelier's Cellar</h2>
             <div className="space-y-8">
@@ -152,7 +146,6 @@ function Menu() {
                 ))}
             </div>
         </div>
-
       </div>
     </div>
   );
