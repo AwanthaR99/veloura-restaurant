@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { FaFire, FaTint, FaFeatherAlt, FaLeaf } from 'react-icons/fa';
 
 // --- Food Image Imports ---
-import DragonSteakImg from '../assets/images/menu/dragon-steak.jpg';
+import DragonSteakImg from '../assets/images/menu/beef-dish.jpg';
 import PhoenixChickenImg from '../assets/images/menu/phoenix-chicken.jpg';
 import LambImg from '../assets/images/menu/lamb.jpg';
 import ScallopsImg from '../assets/images/menu/scallops.jpg';
