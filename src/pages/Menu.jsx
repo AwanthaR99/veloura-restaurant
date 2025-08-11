@@ -2,7 +2,8 @@ import React, { useState, useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { FaFire, FaTint, FaFeatherAlt, FaLeaf } from 'react-icons/fa';
 
-// --- CORRECTED IMAGE IMPORTS WITH ABSOLUTE PATHS ---
+// --- Image Imports ---
+// Make sure you have these images in your 'src/assets/images/menu' folder with these exact names
 import DragonSteakImg from '@/assets/images/menu/dragon-steak.jpg';
 import PhoenixChickenImg from '@/assets/images/menu/phoenix-chicken.jpg';
 import LambImg from '@/assets/images/menu/lamb.jpg';
@@ -18,11 +19,10 @@ import TartImg from '@/assets/images/menu/tart.jpg';
 import VeritaserumImg from '@/assets/images/menu/veritaserum.png';
 import FelixFelicisImg from '@/assets/images/menu/felix-felicis.png';
 import AmortentiaImg from '@/assets/images/menu/amortentia.png';
-import BeefDishImg from '@/assets/images/menu/beef-dish.jpg';
 
 const menuData = {
   hearth: [
-    { img: BeefDishImg, name: "Dragon's Breath Steak", price: "Rs. 4500", description: "Flame-grilled to perfection with a fiery peppercorn reduction." },
+    { img: DragonSteakImg, name: "Dragon's Breath Steak", price: "Rs. 4500", description: "Flame-grilled to perfection with a fiery peppercorn reduction." },
     { img: PhoenixChickenImg, name: "Phoenix's Ascent", price: "Rs. 3200", description: "Spicy, char-grilled chicken on a bed of saffron risotto." },
     { img: LambImg, name: "Ember-Roasted Lamb", price: "Rs. 4200", description: "Infused with rosemary and garlic, with a mint and pomegranate glaze." }
   ],
@@ -44,15 +44,15 @@ const menuData = {
 };
 
 const drinksData = [
-  { img: VeritaserumImg, name: "Veritaserum", price: "Rs. 950", description: "A crystal-clear drink with elderflower, cucumber, and mint that promises only truth in its refreshing taste." },
-  { img: FelixFelicisImg, name: "Felix Felicis", price: "Rs. 1100", description: "A shimmering, golden concoction of passionfruit and ginger ale for when you need a touch of liquid luck." },
-  { img: AmortentiaImg, name: "Amortentia", price: "Rs. 950", description: "A pink, floral drink with notes of rose, lychee, and vanilla, served with a single, perfect rose petal." }
+  { img: VeritaserumImg, name: "Veritaserum", price: "Rs. 950", description: "A crystal-clear drink with elderflower, cucumber, and mint." },
+  { img: FelixFelicisImg, name: "Felix Felicis", price: "Rs. 1100", description: "A shimmering, golden concoction of passionfruit and ginger ale." },
+  { img: AmortentiaImg, name: "Amortentia", price: "Rs. 950", description: "A pink, floral drink with notes of rose, lychee, and vanilla." }
 ];
 
 const winesData = [
-    { name: "Cabernet Sauvignon", type: "Red Wine", description: "A bold, full-bodied red with notes of dark fruit and oak. Pairs perfectly with our Hearth dishes." },
-    { name: "Chardonnay", type: "White Wine", description: "A crisp, elegant white with hints of citrus and vanilla, ideal for our Elixir creations." },
-    { name: "Brut Champagne", type: "Sparkling", description: "A premier French Champagne for celebrating those truly magical moments." }
+    { name: "Cabernet Sauvignon", type: "Red Wine", description: "A bold, full-bodied red with notes of dark fruit and oak." },
+    { name: "Chardonnay", type: "White Wine", description: "A crisp, elegant white with hints of citrus and vanilla." },
+    { name: "Brut Champagne", type: "Sparkling", description: "A premier French Champagne for celebrating magical moments." }
 ];
 
 const categoryDetails = {
@@ -146,6 +146,7 @@ function Menu() {
                 ))}
             </div>
         </div>
+
       </div>
     </div>
   );
