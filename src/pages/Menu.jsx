@@ -3,7 +3,7 @@ import { gsap } from 'gsap';
 import { FaFire, FaTint, FaFeatherAlt, FaLeaf } from 'react-icons/fa';
 
 // --- Food Image Imports ---
-import DragonSteakImg from '../assets/images/menu/beef-dish.jpg';
+
 import PhoenixChickenImg from '../assets/images/menu/phoenix-chicken.jpg';
 import LambImg from '../assets/images/menu/lamb.jpg';
 import ScallopsImg from '../assets/images/menu/scallops.jpg';
@@ -24,7 +24,7 @@ import AmortentiaImg from '../assets/images/menu/amortentia.png';
 
 const menuData = {
   hearth: [
-    { img: DragonSteakImg, name: "Dragon's Breath Steak", price: "Rs. 4500", description: "Flame-grilled to perfection with a fiery peppercorn reduction." },
+   
     { img: PhoenixChickenImg, name: "Phoenix's Ascent", price: "Rs. 3200", description: "Spicy, char-grilled chicken on a bed of saffron risotto." },
     { img: LambImg, name: "Ember-Roasted Lamb", price: "Rs. 4200", description: "Infused with rosemary and garlic, with a mint and pomegranate glaze." }
   ],
